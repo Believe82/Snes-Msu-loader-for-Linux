@@ -45,22 +45,22 @@ def back_insert(filename):
 
 
 #sets the Download path
-dpath = back_insert("/home/pedro/Downloads/")
+dpath = back_insert("/home/user/Downloads/")
 
 #sets the Msu path
-spath = back_insert("/media/pedro/Games/snes/msu/")
+spath = back_insert(".../snes/msu/")
 
 #set full Path to Emulator Executable:
-game = back_insert("/usr/bin/snes9x-gtk")
+game = back_insert(".../bin/snes9x-gtk")
 
 #set full Path to your Tracker:
-tracker = back_insert("/usr/share/OpenTracker/OpenTracker")
+tracker = back_insert("/.../OpenTracker/OpenTracker")
 
 #set full Path to Qusb or SNI:
-wsocket = back_insert("/bin/QUsb2Snes")
+wsocket = back_insert("/.../QUsb2Snes")
 
 #set full Path to your Timer:
-counter = back_insert("/home/pedro/LibreSplit/libresplit")
+counter = back_insert("/.../LibreSplit/libresplit")
 
 #creates a list with all the files in Download folder
 files = [f for f in os.listdir(dpath) if f.endswith(".sfc")]
