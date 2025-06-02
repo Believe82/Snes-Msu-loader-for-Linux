@@ -1,5 +1,4 @@
-## This is a very bare bone version of an 
-## MSU Loader for Debian distros of Linux
+## This is an MSU Loader for Debian distros of Linux
 It is super simple to setup and does the following:
 
 1 - Changes any file you download to your MSU file name
