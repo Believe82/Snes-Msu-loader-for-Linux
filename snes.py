@@ -50,18 +50,6 @@ dpath = back_insert("/home/user/Downloads/")
 #sets the Msu path
 spath = back_insert(".../snes/msu/")
 
-#set full Path to Emulator Executable:
-game = back_insert(".../bin/snes9x-gtk")
-
-#set full Path to your Tracker:
-tracker = back_insert("/.../OpenTracker/OpenTracker")
-
-#set full Path to Qusb or SNI:
-wsocket = back_insert("/.../QUsb2Snes")
-
-#set full Path to your Timer:
-counter = back_insert("/.../LibreSplit/libresplit")
-
 #creates a list with all the files in Download folder
 files = [f for f in os.listdir(dpath) if f.endswith(".sfc")]
 
@@ -96,7 +84,14 @@ move = ("mv " + dpath + fchoice + " " + spath + schoice +
 subprocess.call(move, shell = True)
 
 #Runs the Emulator, socket, Timer and Tracker
-commands = [wsocket, counter, tracker, game]
+#Edit your paths here, Delete a line if you dont want to load a program
+commands = [
+back_insert("/usr/bin/snes9x-gtk"),                 #Emulator
+back_insert("/usr/share/OpenTracker/OpenTracker"),  #Tracker
+back_insert("/usr/bin/QUsb2Snes"),                  #Wsocket
+back_insert("/home/user/LibreSplit/libresplit")     #Timer
+]
+
 procs = [Popen(i) for i in commands]
 for p in procs:
     p.wait()
