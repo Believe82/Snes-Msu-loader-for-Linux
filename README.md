@@ -16,6 +16,7 @@ Download the py file and save it anywhere
 Edit the file using vim /target/snes.py or any other Python editor
 
 Change all the file paths to reflect your directories.
+If you don't need or don't have one of the programs, just delete the full line.
 
 ### Run the script
 in any terminal go to the path your your snes.py and run it using:
